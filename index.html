@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D-схема</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      padding: 14px 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      background: #555;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #444;
+    }
+    .services, .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .card {
+      flex: 1 1 calc(33% - 50px);
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+    /* Изображения портфолио */
+    .portfolio img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .portfolio img:hover {
+      transform: scale(1.05);
+    }
+    /* Адаптивность */
+    @media(max-width: 992px) {
+      .card {
+        flex: 1 1 calc(45% - 40px);
+      }
+    }
+    @media(max-width: 600px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+    /* Форма заявки */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 12px 15px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    input:focus, textarea:focus {
+      border-color: #4facfe;
+      box-shadow: 0 0 8px rgba(76, 172, 254, 0.3);
+      outline: none;
+    }
+    button {
+      padding: 15px;
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+      transform: scale(1.05);
+    }
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    /* Добавим плавность для всего сайта */
+    * {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>3D-схема</h1>
+  <p>Проектирование и 3D-печать — создаем ваши идеи в реальность!</p>
+</header>
+
+<nav>
+  <a href="#services">Услуги</a>
+  <a href="#portfolio">Портфолио</a>
+  <a href="#order">Заказать</a>
+  <a href="#contacts">Контакты</a>
+</nav>
+
+<section id="services">
+  <h2>Наши услуги</h2>
+  <div class="services">
+    <div class="card">
+      <h3>3D-моделирование</h3>
+      <p>Создание точных цифровых моделей ваших идей для дальнейшей реализации.</p>
+    </div>
+    <div class="card">
+      <h3>3D-печать</h3>
+      <p>Изготовление прототипов, деталей и готовых изделий на современном оборудовании.</p>
+    </div>
+    <div class="card">
+      <h3>Проектирование</h3>
+      <p>Разработка технических решений и дизайн для ваших проектов.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Наши проекты</h2>
+  <div class="portfolio">
+    <!-- Изображения портфолио -->
+    <div class="card"><img src="https://i.ibb.co/5ghGwhHG/1.jpg" alt="Проект 1"></div>
+    <div class="card"><img src="https://i.ibb.co/q33nwjnk/2.jpg" alt="Проект 2"></div>
+    <div class="card"><img src="https://i.ibb.co/FqwGhrjL/3.jpg" alt="Проект 3"></div>
+    <div class="card"><img src="https://i.ibb.co/zgYgXH8/4.jpg" alt="Проект 4"></div>
+    <div class="card"><img src="https://i.ibb.co/Gv603S9V/5.jpg" alt="Проект 5"></div>
+    <div class="card"><img src="https://i.ibb.co/4wXmsZ5g/6.jpg" alt="Проект 6"></div>
+    <div class="card"><img src="https://i.ibb.co/mVn4yGCp/7.jpg" alt="Проект 7"></div>
+    <div class="card"><img src="https://i.ibb.co/dsnF2yj7/8.jpg" alt="Проект 8"></div>
+    <div class="card"><img src="https://i.ibb.co/ZR21Ct2S/9.jpg" alt="Проект 9"></div>
+    <div class="card"><img src="https://i.ibb.co/XfFRdsLD/10.jpg" alt="Проект 10"></div>
+    <div class="card"><img src="https://i.ibb.co/ynwG50rd/11.jpg" alt="Проект 11"></div>
+    <div class="card"><img src="https://i.ibb.co/0R4Gsnrr/12.jpg" alt="Проект 12"></div>
+    <div class="card"><img src="https://i.ibb.co/qY35sQF7/13.jpg" alt="Проект 13"></div>
+    <div class="card"><img src="https://i.ibb.co/m56DrrJt/14.jpg" alt="Проект 14"></div>
+    <div class="card"><img src="https://i.ibb.co/LX9cm4Dh/15.jpg" alt="Проект 15"></div>
+  </div>
+</section>
+
+<section id="order">
+  <h2>Оставьте заявку на заказ</h2>
+  <form action="https://formspree.io/f/xanperna" method="POST">
+    <input type="text" name="name" placeholder="Имя" required>
+    <input type="email" name="_replyto" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Телефон" required>
+    <textarea name="message" placeholder="Описание заказа" required></textarea>
+    <button type="submit">Отправить заявку</button>
+  </form>
+</section>
+
+<section id="contacts">
+  <h2>Контакты</h2>
+  <p>Почта: <a href="mailto:brus43224@gmail.com">brus43224@gmail.com</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 3D-схема. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
